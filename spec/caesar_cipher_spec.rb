@@ -1,6 +1,8 @@
+# frozen_string_literal: true
+
 # spec/caesar_cipher_spec.rb
 
-require_relative '..My_Ruby/caesar_cipher'  # Adjust the path as needed
+require_relative '../My_Ruby/caesar_cipher' # Adjust the path as needed
 require 'spec_helper'
 
 RSpec.describe '#caesar_cipher' do

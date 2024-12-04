@@ -1,0 +1,47 @@
+# spec/sub_strings_spec.rb
+require 'spec_helper'
+require_relative '../My_Ruby/substrings'
+
+RSpec.describe '#sub_strings' do
+  it 'returns a hash with counts of each substring found' do
+    word = "Howdy partner, sit down! How's it going?"
+    dictionary = ["how", "partner", "sit", "down", "howdy"]
+    result = sub_strings(word, dictionary)
+    expected = {
+      "how" => 2,
+      "partner" => 1,
+      "sit" => 1,
+      "down" => 1,
+      "howdy" => 1
+    }
+    expect(result).to eq(expected)
+  end
+
+  it 'is case insensitive' do
+    word = "Hello HELLo hello"
+    dictionary = ["hello"]
+    result = sub_strings(word, dictionary)
+    expected = { "hello" => 3 }
+    expect(result).to eq(expected)
+  end
+
+  it 'handles multiple words' do
+    word = "This is a test. Testing tests."
+    dictionary = ["test", "testing", "tests"]
+    result = sub_strings(word, dictionary)
+    expected = {
+      "test" => 2,
+      "testing" => 1,
+      "tests" => 1
+    }
+    expect(result).to eq(expected)
+  end
+
+  it 'returns an empty hash if no substrings are found' do
+    word = "No matching substrings here."
+    dictionary = ["hello", "world"]
+    result = sub_strings(word, dictionary)
+    expected = {}
+    expect(result).to eq(expected)
+  end
+end
