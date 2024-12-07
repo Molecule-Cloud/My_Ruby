@@ -1,6 +1,3 @@
-Here's a comprehensive README template for your Tic Tac Toe game:
-
----
 
 # **Tic Tac Toe Game**
 
@@ -59,10 +56,7 @@ A simple implementation of the classic Tic Tac Toe game, where two players take 
 
 ---
 
-## **Screenshots**
-_Add screenshots or GIFs of your game in action to make your README more engaging._
 
----
 
 ## **Future Enhancements**
 - Add a single-player mode with AI.
@@ -100,4 +94,3 @@ For questions or feedback, feel free to reach out:
 - GitHub: [YourUsername](https://github.com/yourusername)
 - Email: your.email@example.com
 
----
